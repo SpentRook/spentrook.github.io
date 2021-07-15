@@ -80,6 +80,7 @@
       font-size: 30px;
       padding: 0 20px;
       line-height: 60px;
+      cursor: pointer;
       display: none;
   }
 
@@ -128,7 +129,11 @@
       }
 
       .nav-menu-visible{
-        left:0;
+        left: 0;
+      }
+
+      .nav-toggle:focus:not(:focus-visible){
+          outline: none;
       }
   }
  
