@@ -5,7 +5,7 @@ const navFas = Array.from(document.querySelectorAll(".nav-toggle .fas"));
 navToggle.addEventListener("click", () =>{
     navMenu.classList.toggle("nav-menu-visible");
     navFas.map((element)=>{
-        return element.classList.toggle("fas-invisible");
+        return element.classList.toggle("fas-hidden");
     });
 
     if (navMenu.classList.contains("nav-menu_visible")){
