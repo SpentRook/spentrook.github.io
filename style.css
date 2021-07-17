@@ -1,4 +1,6 @@
  /*variables, base reset, etc*/
+ @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
  *{
     margin: 0;
     box-sizing: border-box;
@@ -20,6 +22,14 @@
       font-family: sans-serif;
       padding: 90px 20px 0;
       
+  }
+
+  /*particles' settings*/
+  #particles-js{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
   }
 /* navbar and header styles */
   .header{
@@ -45,10 +55,11 @@
   }
 
   .logo{
-      font-size: 30px;
+      font-size: 35px;
       font-weight: bold;
       padding: 0 40px;
       line-height: 80px;
+      font-family: 'Inconsolata', monospace;
   }
 
   .nav-menu{
@@ -153,6 +164,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+      gap: 0;
+      
   }
 
   .welcome-section-title{
@@ -165,5 +179,50 @@
     line-height: 40px;
     padding: 0 10px;
     border-radius: 15px 15px 0 0;
+    font-size: calc(1.2em + 0.5vw);
+    font-family: 'Inconsolata', monospace;
+}
+
+.welcome-section-content{
+    width: 100%;
+    max-width: 50vw;
+    min-width: 300px;
+    padding: 1em;
+    background-color: rgba(103, 102, 102, 0.12);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     font-size: calc(1em + 0.5vw);
+    font-family: 'Inconsolata', monospace;
+    line-height: calc(1.5em + 0.1vw);
+    text-align: left;
+    
+}
+
+/*typing animation*/
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink .95s infinite;
+    -moz-animation: blink .95s infinite;
+    -ms-animation: blink .95s infinite;
+    -o-animation: blink .95s infinite;
+    animation: blink .95s infinite
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
