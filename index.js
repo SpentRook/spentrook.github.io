@@ -140,11 +140,12 @@ const cursorChar = '&#9608;';
 
 
 
-const textElementsos = Array.from(document.querySelectorAll(".line-text-typed"));
-let textFormatted = textElementsos.map((element) =>{
+/*const textElementsos = Array.from(document.querySelectorAll(".line-text-typed"));
+let textFormatted = textElementsos.map((element) => {
     return element.innerHTML;
 });
-/*let typeWriter = (index)=>{
+let typeWriter = (index)=>{
+    let loc = 
 
 }*/
 
@@ -191,17 +192,16 @@ for (let i = 0; i < textElements.length; i++) {
     }
     ; cumulativeDelayTime.push(sum);
 };
- let typeLineTimeout = new Array();
+let typeLineTimeout = new Array();
 for (let i = 0; i < textElements.length; i++) {
     typeLineTimeout[i] = setTimeout((function (index) {
         return function () {
             cursorLine.className = 'hidden';
             typeWriter(index);
         }
-    }
-    )(i), cumulativeDelayTime[i]);
+    })(i), cumulativeDelayTime[i]);
 };
- let skip = function () {
+let skip = function () {
     clearTimeout(currentTimeout);
     clearTimeout(showCursor);
     for (let i = 0; i < typeLineTimeout.length; i++) {

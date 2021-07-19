@@ -29,7 +29,7 @@
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
   }
 /* navbar and header styles */
   .header{
@@ -76,7 +76,7 @@
   }
 
   .nav-menu-link:hover, .nav-menu-link_active{
-    background-color: #034574;
+    background-color: #242424;
     transition: 0.5s
   }
 
@@ -96,7 +96,7 @@
       display: none;
   }
 
-  @media(max-width:768px){
+  @media(max-width:965px){
       body{
           padding-top: 70px;
       }
@@ -116,6 +116,8 @@
           align-items: center;
           margin: 0;
           background-color: rgb(9 8 8 / 0.35);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
           position: fixed;
           left: 0;
           top: 60px;
@@ -133,7 +135,7 @@
 
       .nav-menu-link:hover, .nav-menu-link_active{
           background: none;
-          color: #83c5f7; 
+          color: rgba(255, 255, 255, 0.6); 
       }
 
       .nav-toggle{
@@ -181,6 +183,7 @@
     border-radius: 15px 15px 0 0;
     font-size: calc(1.2em + 0.5vw);
     font-family: 'Inconsolata', monospace;
+    
 }
 
 .welcome-section-content{
@@ -195,13 +198,14 @@
     font-family: 'Inconsolata', monospace;
     line-height: calc(1.5em + 0.1vw);
     text-align: left;
-    
+    z-index: -1;
 }
 
 /*typing animation*/
 .hidden{
     display: none;
     visibility: hidden;
+    z-index: 0;
 }
 
 .typed-cursor {
@@ -210,7 +214,7 @@
     -moz-animation: blink .95s infinite;
     -ms-animation: blink .95s infinite;
     -o-animation: blink .95s infinite;
-    animation: blink .95s infinite
+    animation: blink .95s infinite;
 }
 
 @keyframes blink {
