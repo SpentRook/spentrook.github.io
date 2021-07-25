@@ -222,4 +222,15 @@ window.onkeydown = function (key) {
     }
 };
 
+/** 
+ * Logic of skills section
+ */ 
 
+let skillsContainers = Array.from(document.querySelectorAll(".skills-section-title"));
+console.log(skillsContainers);
+
+skillsContainers.forEach((element)=>{
+    element.addEventListener("click", ()=>{
+        element.classList.toggle("skills-section-title-active");
+    });
+});
