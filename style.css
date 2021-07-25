@@ -30,7 +30,7 @@
     height: 100vh;
     width: 100%;
     position: fixed;
-    z-index: -1;
+    z-index: 0;
   }
 /* navbar and header styles */
   .header{
@@ -98,7 +98,7 @@
       display: none;
   }
 
-  @media screen and (max-width:1024px){
+  @media screen and (max-width: 996px){
 
       .header{
           height:60px;
@@ -170,7 +170,7 @@
       padding-top: 90px;
   }
 
-  @media (max-width:1024px){
+  @media (max-width:996px){
       .welcome-section{
         padding-top: 70px;
   }
@@ -261,42 +261,58 @@
     width: 100%;
     max-width:50vw;
     min-width:300px;
+    border-bottom: solid white;
+    background-color: rgba(103, 102, 102, 0.12);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
 }
 
 .skills-section-title{
     position: relative;
     padding: 10px;
-    background-color: black;
     cursor: pointer;
     font-size: calc(1em + 0.5vw);
+    display: flex;
+    justify-content: space-between;
+
 }
 
-.skills-section-title::before{
-    content:"+";
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    font-size: 1.5em;
+.skills-section-title > svg{
+    transition: transform 0.7s ease-in;
 }
 
 .skills-container p{
     position: relative;
-    color:black;
-    background: rgba(255,255,255,0.8);
+    padding: 0 10px;
     height: 0;
     overflow: hidden;
-    transition: 0.5s;
-    overflow-y: auto;
+    transition: height 1s ease;
+    overflow-y: hidden;
 }
+
+
 
 .skills-section-title-active ~ p{
     height:150px;
-    padding: 10px;
+    animation: fade 1.5s forwards;
+    
 }
 
-.skills-section-title-active::before{
-    content:"-";
+
+.skills-section-title-active > svg{
+    transform: rotate(180deg);
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+        overflow-y: auto;
+    }
 }
 
 
