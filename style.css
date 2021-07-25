@@ -1,5 +1,6 @@
  /*variables, base reset, etc*/
  @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1');
 
  *{
     margin: 0;
@@ -20,7 +21,7 @@
   body{
       background-color:#242424;
       font-family: sans-serif;
-      padding: 90px 20px 0;
+       /* 90px 20px 0*/
       
   }
 
@@ -34,7 +35,7 @@
 /* navbar and header styles */
   .header{
      /*background: linear-gradient(to right, #FF00E5, #07ADEF);*/
-     background-color: rgba(255, 255, 255, 0.1);
+     background-color:black;
      height: 80px;
      position: fixed;
      width: 100%;
@@ -96,10 +97,7 @@
       display: none;
   }
 
-  @media(max-width:965px){
-      body{
-          padding-top: 70px;
-      }
+  @media screen and (max-width:1024px){
 
       .header{
           height:60px;
@@ -160,16 +158,23 @@
       align-items: center;
       justify-content: center;
       color: white;
-      width: 100%;
-      min-height:calc(100vh - 80px - 90px);
+      width:100%;
+      min-height:100vh;
       overflow:auto;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       gap: 0;
-      
+      padding-top: 90px;
   }
+
+  @media (max-width:1024px){
+      .welcome-section{
+        padding-top: 70px;
+  }
+      }
+    
 
   .welcome-section-title{
     width: 100%;
@@ -230,3 +235,19 @@
         opacity: 1;
     }
 }
+
+#welcome-section > p{
+    margin-top: 50px;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    font-size: calc(1em + 0.5vw);
+    font-style: italic;
+    font-weight: 100;
+    font-family: 'Crimson Text', serif;
+}
+ 
+.skills-section-title{
+    margin: auto;
+}
+
