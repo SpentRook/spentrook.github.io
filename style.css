@@ -237,7 +237,23 @@
     }
 }
 
+.welcome-section-content + p{
+    padding-top: 20vh;
+    font-family: 'Crimson Text', serif;
+    font-style:italic;
+    font-size: calc(1.2em + 0.5vw);
+    font-weight:300;
+}
 
+.welcome-section-content + p > a{
+    position: relative;
+    list-style: none;
+    color:inherit;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 900;
+}
 
 /*skills section*/
  
