@@ -27,8 +27,8 @@ let typed = new Typed("#typed", {
   backSpeed: 1000,
 });
 
-/*const fileUrl = "test.txt"; // provide file location
+const fileUrl = "test.txt"; // provide file location
 
 fetch(fileUrl)
   .then((r) => r.text())
-  .then((t) => console.log(t));*/
+  .then((t) => console.log(t));
