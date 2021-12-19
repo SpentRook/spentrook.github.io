@@ -24,6 +24,11 @@ body {
   /* 90px 20px 0*/
 }
 
+ul,
+li {
+  list-style: none;
+}
+
 /*particles' settings*/
 #particles-js {
   height: 100vh;
@@ -67,7 +72,6 @@ body {
 .nav-menu {
   display: flex;
   margin-right: 40px;
-  list-style: none;
 }
 
 .nav-menu-item {
@@ -303,6 +307,7 @@ body {
 /*projects section*/
 
 .projects-section {
+  box-sizing: border-box;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
@@ -321,4 +326,234 @@ body {
   min-height: 550px;
   z-index: 1;
   backdrop-filter: blur(5px);
+}
+.main-carousel {
+  margin: 30px;
+}
+
+.carousel-cell {
+  width: 100%;
+  min-height: fit-content;
+  border-radius: 5px;
+}
+/* no circle */
+.flickity-button {
+  background: transparent;
+  visibility: visible;
+}
+.flickity-button:hover {
+  background: transparent;
+}
+.flickity-button:focus {
+  box-shadow: 0 0 0 5px white;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: white;
+}
+/* hide disabled button */
+.flickity-button:disabled {
+  display: none;
+}
+.flickity-page-dots .dot {
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+.bar {
+  display: block;
+  position: relative;
+  height: 24px;
+  background-color: #ddd;
+  width: 100%;
+  color: #6a6a6a;
+}
+
+.bar div,
+.bar div::after,
+.bar div::before {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  background-color: #ff5f57;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.bar div::after {
+  content: " ";
+  left: 16px;
+  background-color: #ffbd2e;
+  top: 0;
+}
+
+.bar div::before {
+  content: " ";
+  left: 32px;
+  background-color: #28ca41;
+  top: 0;
+}
+
+.project-tile {
+  padding: 70px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+  align-items: center;
+}
+
+.project-tile .screen {
+  width: fit-content;
+  background: none;
+  height: fit-content;
+}
+
+.project-image-tags {
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.project-image source,
+.project-image img {
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+.project-image-tags:hover {
+  filter: brightness(50%);
+}
+
+.screen {
+  color: #999;
+  text-decoration: none;
+  position: relative;
+}
+
+.project-tags {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  align-content: center;
+}
+
+.project-tags:hover {
+  opacity: 1;
+}
+
+.project-tag {
+  width: fit-content;
+  background-color: #313131;
+  padding: 5px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #222;
+  border-radius: 3px;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 0 rgb(0 0 0 / 25%);
+  font-weight: bold;
+  color: white;
+  filter: brightness(1.1);
+  font-size: 13px;
+  height: fit-content;
+  flex: 0 0 calc(20% - 40px);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  gap: 30px;
+  max-width: 1000px;
+  line-height: 30px;
+}
+
+@media (max-width: 1060px) {
+  .project-tile {
+    flex-direction: column;
+  }
+
+  .carousel-cell {
+    height: max-content;
+  }
+}
+
+@media (max-width: 498px) {
+  .project-tile {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .flickity-button {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 670px) {
+  .project-tile h2 {
+    font-size: 34px;
+  }
+  .project-tile p {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1060px) {
+  .project-tile h2 {
+    font-size: 26px;
+  }
+  .project-tile p {
+    font-size: 16px;
+  }
+
+  .carousel-cell {
+    height: fit-content;
+  }
+}
+
+@media (min-width: 1140px) {
+  .project-tile h2 {
+    font-size: 32px;
+  }
+  .project-tile p {
+    font-size: 20px;
+  }
+
+  .project-image-tags {
+    min-width: 400px;
+  }
+}
+
+.project-link-github {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-info .project-link-github div {
+  width: 50px;
+  fill: white;
+}
+
+@media (max-width: 660px) {
+  .project-info .project-link-github div {
+    width: 35px;
+  }
 }

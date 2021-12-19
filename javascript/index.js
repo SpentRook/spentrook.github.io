@@ -32,3 +32,12 @@ const fileUrl = "test.txt"; // provide file location
 fetch(fileUrl)
   .then((r) => r.text())
   .then((t) => console.log(t));
+
+let elem = document.querySelector(".main-carousel");
+let flkty = new Flickity(elem, {
+  // options
+  cellAlign: "left",
+  contain: true,
+  wrapAround: true,
+  autoPlay: 20000,
+});
