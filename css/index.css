@@ -428,8 +428,22 @@ li {
   height: auto;
   z-index: 10;
 }
+
 .project-image-tags:hover {
   filter: brightness(50%);
+}
+
+.project-image-tags-hidden:hover .project-image {
+  opacity: 0;
+}
+
+/*hover image for each project*/
+
+.project-image-tags:hover.project-timo:hover {
+  background-image: url("/assets/projects/TimoAdminPanel.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .screen {
@@ -474,6 +488,7 @@ li {
   font-size: 13px;
   height: fit-content;
   flex: 0 0 calc(20% - 40px);
+  text-align: center;
 }
 
 .project-info {
