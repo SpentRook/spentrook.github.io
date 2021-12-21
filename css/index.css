@@ -440,7 +440,7 @@ li {
 /*hover image for each project*/
 
 .project-image-tags:hover.project-timo:hover {
-  background-image: url("/assets/projects/TimoAdminPanel.png");
+  background-image: url("/assets/projects/timo-admin-panel.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
