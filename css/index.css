@@ -422,6 +422,12 @@ li {
   min-width: 300px;
 }
 
+@media (max-width: 360px) {
+  .project-image-tags {
+    min-width: 250px;
+  }
+}
+
 .project-image source,
 .project-image img {
   width: 100%;
