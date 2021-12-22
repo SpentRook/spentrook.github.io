@@ -452,6 +452,13 @@ li {
   background-position: center;
 }
 
+.project-image-tags:hover.project-dugol:hover {
+  background-image: url("/assets/projects/how-works-dugol.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .screen {
   color: #999;
   text-decoration: none;
