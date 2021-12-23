@@ -39,3 +39,33 @@ let flkty = new Flickity(elem, {
   wrapAround: true,
   autoPlay: 20000,
 });
+
+/**
+ * Logic with Observer
+ */
+
+const options = {
+  rootMargin: "-40% 0px -40% 0px",
+  threshold: 0.12,
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const id = entry.target.getAttribute("id");
+    const menuLink = document.querySelector(`.nav-menu-item a[href="#${id}"`);
+
+    entry.isIntersecting
+      ? menuLink.classList.add("nav-menu-link_active")
+      : menuLink.classList.remove("nav-menu-link_active");
+  });
+}, options);
+
+const navLinks = document.querySelectorAll(".nav-menu-link");
+navLinks.forEach((navLink) => {
+  const address = navLink.getAttribute("href");
+  const target = document.querySelector(address);
+
+  if (target) {
+    observer.observe(target);
+  }
+});
