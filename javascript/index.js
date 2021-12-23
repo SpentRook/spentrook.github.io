@@ -3,13 +3,11 @@
  */
 const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".nav-menu");
-const navFas = Array.from(document.querySelectorAll(".nav-toggle .fas"));
+const navMenuIcon = document.querySelector(".menu-icon");
 
 navToggle.addEventListener("click", () => {
   navMenu.classList.toggle("nav-menu-visible");
-  navFas.map((element) => {
-    return element.classList.toggle("fas-hidden");
-  });
+  navMenuIcon.classList.toggle("menu-open");
 
   if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle.setAttribute("aria-label", "Close menu");
