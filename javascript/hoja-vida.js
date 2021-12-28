@@ -8,12 +8,12 @@ leftToggleButton.addEventListener("click", () => {
   if (leftToggle.classList.contains("left-container-visible")) {
     leftToggleButton.setAttribute(
       "aria-label",
-      "Close contact information and studies"
+      "Cerrar informacion de contacto y estudios"
     );
   } else {
     leftToggleButton.setAttribute(
       "aria-label",
-      "Open contact information and studies"
+      "Abrir informacion de contacto y estudios"
     );
   }
 });
