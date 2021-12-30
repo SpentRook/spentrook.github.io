@@ -64,10 +64,12 @@ const observer = new IntersectionObserver((entries) => {
 
 const navLinks = document.querySelectorAll(".nav-menu-link");
 navLinks.forEach((navLink) => {
-  const address = navLink.getAttribute("href");
-  const target = document.querySelector(address);
+  try {
+    const address = navLink.getAttribute("href");
+    const target = document.querySelector(address);
 
-  if (target) {
-    observer.observe(target);
-  }
+    if (target) {
+      observer.observe(target);
+    }
+  } catch (e) {}
 });
