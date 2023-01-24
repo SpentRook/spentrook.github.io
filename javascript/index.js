@@ -21,7 +21,7 @@ navToggle.addEventListener("click", () => {
  */
 let typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
-  typeSpeed: 40,
+  typeSpeed: 50,
   backSpeed: 1000,
 });
 
